@@ -33,7 +33,7 @@ def save():
 	session.add(newImage)
 	session.commit()
 
-	return redirect("homepage") #Does not return anything important
+	return redirect("/") #Does not return anything important
 
 
 app.run()
