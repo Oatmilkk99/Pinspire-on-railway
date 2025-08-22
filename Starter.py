@@ -36,5 +36,3 @@ def save():
 	return redirect("/") #Does not return anything important
 
 
-app.run()
-
