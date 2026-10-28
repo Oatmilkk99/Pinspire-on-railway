@@ -29,10 +29,11 @@ def save():
 	description = request.form["description"]
 	picture = request.files["image"]
 	newImage = Image(image_name = Imagename, description = description,filename = picture.filename)
-	picture.save(dst = rf"C:\Users\PC\Desktop\Flask\static\All pictures\{picture.filename}")
+	picture.save(dst =f"static/images/{picture.filename}") 
 	session.add(newImage)
 	session.commit()
 
 	return redirect("/") #Does not return anything important
 
 
+app.run(port=9000)
